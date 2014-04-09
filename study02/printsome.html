@@ -1,0 +1,28 @@
+<meta charset="utf-8" />
+<script>
+var retrunSwitchValue = prompt("1.1~100까지출력 2.짝수 출력 3.홀수 출력 4.구구 ", "");
+
+	retrunSwitchValue = parseInt(retrunSwitchValue);
+
+	switch(retrunSwitchValue){
+		case 1:
+		case 2:
+		case 3:
+			for(var i=1; i<=100; i++){
+				if(retrunSwitchValue == 1)
+					console.log(i);
+				else if(i%2 == 0 && retrunSwitchValue == 2)
+					console.log(i);
+				else if(i%2 != 0 && retrunSwitchValue == 3)
+					console.log(i);
+			}
+			break;
+		case 4:
+	 		for(var i=1; i<=9; i++)
+		 		for(var j=1; j<=9; j++)
+			 		console.log(i, "+", j, "=", i*j);
+	 		break;
+		default:
+			console.log("hellow professer");
+	}
+</script>

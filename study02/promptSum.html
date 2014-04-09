@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+
+<script>
+
+var resultsum = sum();
+document.write(resultsum);
+
+function sum(){
+	
+	var digit = null;
+	var amount=0;
+	
+	var toPlusNumber = prompt();
+	var digit = parseInt(toPlusNumber);
+	
+	if(toPlusNumber == null) return amount;
+	else
+		return digit +=sum();
+}
+
+</script>
