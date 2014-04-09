@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+.hide {display:none;}
+.photosort, img {padding: 0px 20px 0px 5px; }
+.photosort, ul {padding-left: 0px; padding: 0 20 0 0}
+.photosort, ul, ol {width:120px; padding-left: 0px; margin: 0 0 0 0; 
+                    font-size: 10.5px; text-align: center; float: left;}
+.photosort {width: 280px; height: 250px;}    
+h5 {margin: 8px}
+#paging {width: 200px; height: 150px;}
+    
+</style>
+</head>
+
+<body>
+<h5>오늘의 사진 </h5>
+<hr align=left width=20.5% size=2 color="black">
+<div id="wrap" class="photosort"></div>
+<div id="paging">  
+<button type="button" title="이전" id="priorToBtn" class="" onclick="indexchange()">이전 뉴스</button>
+<strong id="index">1</strong>
+<span class="slash">/</span>2  
+<button type="button" title="다음" id = "nextBtn" onclick="indexchange()">다음 뉴스</button>
+<script src="photo.js"></script>
+</div>
+
+</body>
+</html>
+
+
+
