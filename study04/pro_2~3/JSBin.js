@@ -22,19 +22,16 @@ for(var i=0; i<4; i++){
           var classBlackValue =document.querySelectorAll(".black");
           var classWhiteValue = document.querySelectorAll(".white");
           var classRedValue = document.querySelector(".red");
-         console.log(classBlackValue);
     
          if(classBlackValue.length < 8){
-             console.log(classBlackValue.length);
              classRedValue.className = "black";
           }
           else if(classWhiteValue.length < 8){
-              console.log(classBlackValue.length);
               classRedValue.className = "white";
           }
           
           var changeRed = event.target;
-        changeRed.className = "red";
+          changeRed.className = "red";
       });
     
   }
