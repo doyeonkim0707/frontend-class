@@ -19,21 +19,22 @@ for(var i=0; i<4; i++){
       var spaner = board.getElementsByTagName("span")[i*4+j];
       spaner.addEventListener('click', function(event){
           
-        
-          console.log(changeRed);
-          var classRed =document.querySelector(".red");
-          console.log(classRed);
+          var classBlackValue =document.querySelectorAll(".black");
+          var classWhiteValue = document.querySelectorAll(".white");
+          var classRedValue = document.querySelector(".red");
+         console.log(classBlackValue);
     
-         if(classRed != null){
-             classRed.className = "white"; 
+         if(classBlackValue.length < 8){
+             console.log(classBlackValue.length);
+             classRedValue.className = "black";
           }
-        
+          else if(classWhiteValue.length < 8){
+              console.log(classBlackValue.length);
+              classRedValue.className = "white";
+          }
           
-        var changeRed = event.target;  
+          var changeRed = event.target;
         changeRed.className = "red";
-            
-          
-
       });
     
   }
