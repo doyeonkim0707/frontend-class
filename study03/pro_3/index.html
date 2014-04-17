@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>폰 클래스화</title>
+
+<script>
+function getType(obj) {
+    if (obj && obj.constructor && obj.constructor.toString) {
+        var arr = obj.constructor.toString().match(
+            /function\s*(\w+)/);
+        if (arr && arr.length == 2) {
+            return arr[1];
+        }
+    }
+    return undefined;
+}
+</script>
+
+<script src="(OOP_3)chattingPhone.js"></script>
+<script src="(OOP_3)chattingIPhone.js"></script>
+<script src="(OOP_3)chattingandroid.js"></script>
+<script src="(OOP_3)chattingPerson.js"></script>
+
+</head>
+
+<body>
+</body>
+</html>
