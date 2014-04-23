@@ -50,11 +50,7 @@ function callbackStudentAjax(responseText){
     var templateStringSports = getDom('boxTemplateSports').innerHTML;
 	var parseString = [];
 	var student = '';
-<<<<<<< HEAD
     
-=======
-
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
 	for(i=0; i<studentList.length; i++ ){
 		student = studentList[i];
         
@@ -63,56 +59,37 @@ function callbackStudentAjax(responseText){
                 for(var j=0; j<studentList[i].news.length; j++){
 		          parseString.push( template(templateStringNews, 
                                              {article_link: studentList[i].news[j].newsId, 
-											  summary_article: studentList[i].news[j].title}  ) );   
+						 summary_article: studentList[i].news[j].title}  ) );   
                 }
-<<<<<<< HEAD
                 getDom('container_news').innerHTML = parseString.join("");
                 parseString = [];
-=======
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
                 break;
             case 1 :
                 for(var j=0; j<studentList[i].enter.length; j++){
 		          parseString.push( template(templateStringEnter, 
                                              {article_link:studentList[i].enter[j].newsId,
-											  summary_article: studentList[i].enter[j].title}  ) );
+						 summary_article: studentList[i].enter[j].title}  ) );
                 }
-<<<<<<< HEAD
                 
                 getDom('container_Enter').innerHTML = parseString.join("");
                 parseString = [];
-=======
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
                  break;
             case 2 :
                 for(var j=0; j<studentList[i].sports.length; j++){
                   parseString.push( template(templateStringSports,
                                              {article_link:studentList[i].sports[j].newsId,
-											  summary_article: studentList[i].sports[j].title}  ) );
+						  summary_article: studentList[i].sports[j].title}  ) );
                 }
-<<<<<<< HEAD
                 getDom('container_Sports').innerHTML = parseString.join("");
-=======
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
                  break;
         }
 	}
 
-<<<<<<< HEAD
-=======
-	getDom('container').innerHTML = parseString.join("");
-
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
 }
 
 function start(){
 	callAjax('student.js', callbackStudentAjax);
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cad1c225eddff62cb2a0e5f92cb0826209894567
 //시작 
 start();
