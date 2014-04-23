@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<title>frontend-class-2014</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+<menu id="tab_menus">
+
+    <li class="selected">
+        <a href="#QuickMenu_01" id="menu_1">뉴스</a>
+    </li>
+    <li class=" ">
+        <a href="#QuickMenu_02" id="menu_2">연예</a>
+    </li>
+    <li class=" ">
+        <a href="#QuickMenu_03" id="menu_3">스포츠</a>
+    </li>
+</menu>
+
+
+<div id="container"></div>
+<script type="text/template" id="boxTemplateNews" >
+        <li><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+
+<script type="text/template" id="boxTemplateEnter">
+        <li><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+
+<script type="text/template" id="boxTemplateSports">
+		<li><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+    
+
+
+
+<script src="app.js"></script>
+<script src="maketap.js"></script>
+   
+</body>
+</html>
