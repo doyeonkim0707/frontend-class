@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<title>frontend-class-2014</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="app3.css">
+
+    
+</head>
+<body>
+
+<menu id="tab_menus">
+    <li class="selected">
+        <a href="#QuickMenu_01" id="menu_1">뉴스</a>
+    </li>
+    <li class=" ">
+        <a href="#QuickMenu_02" id="menu_2">연예</a>
+    </li>
+    <li class=" ">
+        <a href="#QuickMenu_03" id="menu_3">스포츠</a>
+    </li>
+</menu>
+<div class="tab_right"></div>
+
+    
+    
+<div id="container_news" class="contents"></div>
+<div id="container_Enter" class="contents"></div>  
+<div id="container_Sports" class="contents"></div>
+    
+<script type="text/template" id="boxTemplateNews" >
+        <li class="News_li"><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+
+<script type="text/template" id="boxTemplateEnter">
+        <li class="Enter_li"><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+
+<script type="text/template" id="boxTemplateSports">
+		<li class="Sports_li"><a href="http://media.daum.net/v/{{article_link}}" title="">{{summary_article}}</a></li>
+</script>
+    
+     
+<div>    
+<button id="moreSeebtn">더보기</button>
+</div>   
+
+
+<script src="app.js"></script>
+<script src="makeTap.js"></script>
+<script src="makeMoreSee.js"></script>
+
+   
+</body>
+</html>
