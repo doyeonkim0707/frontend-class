@@ -1,3 +1,5 @@
+
+(function(){
 var selected_menu = 0;
 var content_count = 0;
 
@@ -5,7 +7,7 @@ var selected_class_name = "selected";
 
 var menus = document.getElementById("tab_menus").getElementsByTagName("li");
 var dives = document.getElementsByTagName("div");
-(function(){
+
 var contents = new Array;
 
 for (var i=0; i<dives.length; i++) {
