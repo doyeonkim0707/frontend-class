@@ -1,52 +1,119 @@
-#container {
-	width:80%;
-	margin: 10px auto;
-}
-/*.box{
-	float:left;
-	width:100px;
-	height:100px;
-	background-color:#6f5499;
-	margin: 5px;
-	padding: 10px;
-	border-radius: 5px;
-	color:#cdbfe3;
-	text-align: center;
-	position: relative;
-}*/
-
-
-.box .nameOne li a{
-    text-decoration:none;
-    color:#000;
-	/*font-size: 80%;*/
+/* body */
+body {
+	font: 12px arial;
 }
 
-.box .nameTwo li a{
-    text-decoration:none;
-    color:#000;
-	/*font-size: 80%;*/
+/* tab menu */
+#tab_menus {
+	margin: 20;
+	padding: 0;
+	list-style: none;
+    float: left;
 }
-
-.box .nameThree li a{
-    text-decoration:none;
-    color:#000;
-	/*font-size: 80%;*/
+#tab_menus li {
+	margin-bottom: 16px;
+	float: left;
+	padding: 0px;
 }
-
-.box .github{
-	position: absolute;
-	bottom:10px;
-	left:0;
-	text-align: center;
-	width: 100%;
-}
-.box .test1 {
-	margin-top:10px;
-}
-.box a{
-	color:#fff;
-	font-family: verdana;
-	font-size:70%;
+#tab_menus li a {
+	padding: 8px 10px;
+	color: #505050;
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: #C8C8C8;
+	background-color: white;
+	background-image: none;
+	font-weight: bold;
+	font-size: 0.9em;
 	display: block;
 }
+#tab_menus li a:hover {
+	color: black;
+	background-color: #ae9f96;
+}
+#tab_menus li.selected a {
+	border-bottom: 0 solid white;
+	background: white no-repeat center bottom;
+	color: blue;
+}
+
+.tab_right {
+    margin-top: 17px;
+	margin-bottom: 20px;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #C8C8C8;
+	width: 250px;
+	height: 26px;
+	float: left;
+}
+
+#tab_menus li a{
+ text-decoration: none;
+}
+
+
+#menu_1{
+     
+     border-radius: 5px 0px 0px 0px;
+}
+
+#menu_3{
+     border-radius: 0px 5px 0px 0px;
+}
+
+/* content */
+.contents {
+    width: 500px;
+    float: left;
+	clear: both;
+	padding-left: 10px;
+    word-break: break-all;
+}
+.contents li {
+    width: 400px;
+	margin: 0;
+	padding: 5px 5px 5px 5px;
+	font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+
+.contents li a {
+    width: 400px;
+    text-decoration:none;
+    font-weight: bold;
+    color:#000;
+}
+
+/* contents show more results btn */
+
+#moreSeebtn {
+    margin: 10px;
+    width: 60px;
+    font-size: 15px;
+    color: #000;
+    float: left;
+	clear: both;
+    border: 1px solid #C8C8C8 ;
+    padding: 10px 10px 10px 10px;
+    text-decoration:none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* contents text */
+
+.contents li a:hover{
+
+    text-decoration: underline;
+    color:#8600E4;
+    
+}
+
+
+
+
+
+
