@@ -46,42 +46,42 @@ function callbackStudentAjax(responseText){
 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 	var studentList = JSON.parse(responseText);
 	var templateStringNews = getDom('boxTemplateNews').innerHTML;
-    var templateStringEnter = getDom('boxTemplateEnter').innerHTML;
-    var templateStringSports = getDom('boxTemplateSports').innerHTML;
+	var templateStringEnter = getDom('boxTemplateEnter').innerHTML;
+    	var templateStringSports = getDom('boxTemplateSports').innerHTML;
 	var parseString = [];
 	var student = '';
     
 	for(i=0; i<studentList.length; i++ ){
 		student = studentList[i];
-        switch(i) {
-            case 0 :
-                for(var j=0; j<studentList[i].news.length; j++){
-		          parseString.push( template(templateStringNews, 
+		switch(i) {
+            		case 0 :
+                		for(var j=0; j<studentList[i].news.length; j++){
+		          		parseString.push( template(templateStringNews, 
                                              {article_link: studentList[i].news[j].newsId, 
-											  summary_article: studentList[i].news[j].title}  ) );   
-                }
-                getDom('container_news').innerHTML = parseString.join("");
-                parseString = [];
-                break;
+						summary_article: studentList[i].news[j].title}  ) );   
+                		}
+                		getDom('container_news').innerHTML = parseString.join("");
+                		parseString = [];
+                		break;
                 
-            case 1 :
-                for(var j=0; j<studentList[i].enter.length; j++){
-		          parseString.push( template(templateStringEnter, 
+            		case 1 :
+                		for(var j=0; j<studentList[i].enter.length; j++){
+		          		parseString.push( template(templateStringEnter, 
                                              {article_link:studentList[i].enter[j].newsId,
-											  summary_article: studentList[i].enter[j].title}  ) );
-                }
-                getDom('container_Enter').innerHTML = parseString.join("");
-                parseString = [];
-                 break;
-            case 2 :
-                for(var j=0; j<studentList[i].sports.length; j++){
-                  parseString.push( template(templateStringSports,
+						summary_article: studentList[i].enter[j].title}  ) );
+                		}
+                		getDom('container_Enter').innerHTML = parseString.join("");
+                		parseString = [];
+                 		break;
+            		case 2 :
+                		for(var j=0; j<studentList[i].sports.length; j++){
+                  		parseString.push( template(templateStringSports,
                                              {article_link:studentList[i].sports[j].newsId,
-											  summary_article: studentList[i].sports[j].title}  ) );
-                }
-                getDom('container_Sports').innerHTML = parseString.join("");
-                 break;
-        }
+						summary_article: studentList[i].sports[j].title}  ) );
+                		}
+                		getDom('container_Sports').innerHTML = parseString.join("");
+                 		break;
+        	}
 	}
     
     omitContents();  
@@ -95,13 +95,13 @@ function omitContents(){
     var getBtn = document.getElementById("moreSeebtn");
     
     for(var i=5; i<News_li.length; i++)
-     News_li[i].style.display = "none";
+     	News_li[i].style.display = "none";
     
     for(var i=5; i<Enter_li.length; i++)
-     Enter_li[i].style.display = "none";
+     	Enter_li[i].style.display = "none";
     
     for(var i=5; i<Sports_li.length; i++)
-     Sports_li[i].style.display = "none";
+     	Sports_li[i].style.display = "none";
     
     getBtn.innerHTML = "더보기";
     
@@ -121,7 +121,6 @@ function showMoreResults(){
     
     getBtn.onclick = function(){ omitContents();}; 
 }
-
 
 
 function start(){
