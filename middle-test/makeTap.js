@@ -1,10 +1,12 @@
+(function(){
+    
 var selected_menu = 0;
 var content_count = 0;
 
 var selected_class_name = "selected";
 
 var menus = document.getElementById("tab_menus").getElementsByTagName("li");
-var dives = document.getElementsByTagName("div");
+var dives = document.getElementsByTagName("div");    
 var contents = new Array;
 
 for (var i=0; i<dives.length; i++) {
@@ -13,6 +15,7 @@ for (var i=0; i<dives.length; i++) {
 	if (div.className == "contents") {
 		if (selected_menu == content_count) {
 			div.style.display = "block";
+            
 			menus[content_count].className += " " + selected_class_name;
 		}
 		else {
@@ -41,5 +44,7 @@ for (var i=0; i<menus.length; i++) {
 		selected_menu = this.content_index;
 
 		return false;
-	}
-}
+	}    
+} 
+
+})();
