@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<style>	
+.box{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color : red;
+	left: 0px;
+	top: 0px;
+}	
+	
+</style>
+	
+	
+</head>
+<body>
+<div class="box"></div>
+<button class="btn" style="position: absolute; top:8px;">click</button>
+	
+</body>
+<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+
+<script>
+
+	var nowWindowHeight = $(document).height();
+	var nowWindowWidth = $(document).width();
+	var choose = 1;
+	
+		$('.btn').click(function(){
+			if(choose === 1){	
+				moveAnimate(nowWindowWidth, nowWindowHeight);
+				choose = 0;
+			}
+			else{
+				moveAnimate(0, 0);
+				choose = 1;
+			}
+		});
+
+		function moveAnimate(nowWindowWidths, nowWindowHeights){
+			$('.box').animate({
+			left : nowWindowWidths,
+			top : nowWindowHeights
+			},5000);
+		}
+</script>
+
+
+
+</html>

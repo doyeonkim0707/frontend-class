@@ -1,0 +1,19 @@
+<div id="clickme">
+Click here
+</div>
+<img id="book" src="book.png" alt="" width="100" height="123"
+style="position: relative; left: 10px;">
+
+
+<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+<script>
+$( "#clickme" ).click(function() {
+$( "#book" ).animate({
+opacity: 0.25,
+left: "+=50",
+height: "toggle"
+}, 5000, function() {
+// Animation complete.
+});
+});
+</script>
